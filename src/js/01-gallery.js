@@ -8,8 +8,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-console.log(galleryItems);
-
 const galleyDiv = document.querySelector('.gallery');
 
 galleryItems.map(({ preview, original, description }) => {
@@ -24,5 +22,3 @@ new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionType: 'alt',
 });
-
-galleyDiv.addEventListener('click', onPictureClick);

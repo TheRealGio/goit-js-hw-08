@@ -19,7 +19,7 @@ const loadForm = () => {
 };
 
 const onSaveFormInput = event => {
-  data = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
   data[event.target.name] = event.target.value;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 };
